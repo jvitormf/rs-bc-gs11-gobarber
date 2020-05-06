@@ -7,6 +7,8 @@ node_modules
 
 # testing
 /coverage
+/backend/tmp/*
+!/backend/tmp/.gitkeep
 
 # production
 /build
