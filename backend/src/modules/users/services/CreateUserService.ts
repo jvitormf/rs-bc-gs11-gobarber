@@ -20,7 +20,7 @@ class CreateUserService {
     private usersRepository: IUsersRepository,
 
     @inject('HashProvider')
-    private hashProivder: IHashProvider,
+    private hashProvider: IHashProvider,
 
     @inject('CacheProvider')
     private cacheProvider: ICacheProvider,
@@ -33,7 +33,7 @@ class CreateUserService {
       throw new AppError('Email address is already used!');
     }
 
-    const hashedPassword = await this.hashProivder.generateHash(password);
+    const hashedPassword = await this.hashProvider.generateHash(password);
 
     const user = await this.usersRepository.create({
       name,
