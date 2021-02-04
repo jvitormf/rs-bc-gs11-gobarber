@@ -1,4 +1,5 @@
 import AppError from '@shared/errors/AppError';
+import { addDays } from 'date-fns';
 
 import FakeAppointmentsRepository from '@modules/appointments/infra/repositories/fakes/FakeAppointmentsRepository';
 import FakeNotificationsRepository from '@modules/notifications/repositories/fakes/FakeNotificationsRepository';
@@ -38,7 +39,7 @@ describe('CreateAppointment', () => {
   });
 
   it('should not be able to create two appointments on the same time', async () => {
-    const appointmentDate = new Date(2020, 12, 25, 13);
+    const appointmentDate = addDays(new Date(), 1);
 
     await createAppointment.execute({
       date: appointmentDate,
