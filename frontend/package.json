@@ -16,6 +16,7 @@
     "date-fns": "^2.16.1",
     "polished": "^3.6.3",
     "react": "^16.13.1",
+    "react-avatar": "^3.9.7",
     "react-day-picker": "^7.4.8",
     "react-dom": "^16.13.1",
     "react-icons": "^3.10.0",
