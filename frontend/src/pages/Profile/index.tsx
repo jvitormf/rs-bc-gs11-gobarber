@@ -4,6 +4,8 @@ import { FormHandles } from '@unform/core';
 import { Form } from '@unform/web';
 import * as Yup from 'yup';
 import { useHistory, Link } from 'react-router-dom';
+import Avatar from 'react-avatar';
+
 import api from '../../services/api';
 
 import { useToast } from '../../hooks/toast';
@@ -108,7 +110,7 @@ const Profile: React.FC = () => {
         });
       }
     },
-    [addToast, history],
+    [addToast, history, updateUser],
   );
 
   const handleAvatarChange = useCallback(
@@ -150,7 +152,17 @@ const Profile: React.FC = () => {
           }}
         >
           <AvatarInput>
-            <img src={user.avatar_url} alt={user.name} />
+            {user.avatar_url ? (
+              <img src={user.avatar_url} alt={user.name} />
+            ) : (
+              <Avatar
+                name={user.name}
+                size="186"
+                textSizeRatio={2}
+                maxInitials={2}
+                round
+              />
+            )}
             <label htmlFor="avatar">
               <FiCamera />
               <input type="file" id="avatar" onChange={handleAvatarChange} />

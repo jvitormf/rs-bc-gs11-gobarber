@@ -42,7 +42,7 @@ export const Profile = styled.div`
     border-radius: 50%;
   }
 
-  div {
+  > div {
     display: flex;
     flex-direction: column;
     margin-left: 16px;
