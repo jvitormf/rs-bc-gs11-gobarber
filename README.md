@@ -65,11 +65,13 @@ Gobarber it's a fictitious barbershop app created by [Rocketseat](https://rocket
   [:arrow_up: Back to top](#table-of-Contents)
 
 
-  # :fireworks: Layout
+# :fireworks: Layout
 <!-- * Click [here](https://www.figma.com/file/cg1MIzSRRss8ggpypQbmdD/AluraQuiz?node-id=0%3A1) to see the web layout of this app. -->
 
+### Web
 <!-- <img src=".github/ss1.png" alt="Gobarber"> -->
 <img src=".github/ss2.png" alt="Gobarber">
+<img src=".github/ss3.png" alt="Gobarber">
 
 [:arrow_up: Back to top](#table-of-Contents)
 
