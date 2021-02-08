@@ -17,6 +17,7 @@ mobile/coverage
 /backend/dist
 
 # misc
+debug.log
 ormconfig.json
 .DS_Store
 .env
