@@ -40,7 +40,7 @@ interface ProfileFormData {
 }
 
 const Profile: React.FC = () => {
-  const { user, updateUser } = useAuth();
+  const { user, updateUser, signOut } = useAuth();
   const formRef = useRef<FormHandles>(null);
   const { goBack } = useNavigation();
 
@@ -232,7 +232,8 @@ const Profile: React.FC = () => {
                 textContentType="newPassword"
                 returnKeyType="next"
                 onSubmitEditing={() =>
-                  passwordConfirmationInputref.current?.focus()}
+                  passwordConfirmationInputref.current?.focus()
+                }
               />
 
               <Input
@@ -248,6 +249,9 @@ const Profile: React.FC = () => {
 
               <Button onPress={() => formRef.current?.submitForm()}>
                 Cofirmar mudanças
+              </Button>
+              <Button style={{ backgroundColor: '#db5151' }} onPress={signOut}>
+                Sair
               </Button>
             </Form>
           </Container>
