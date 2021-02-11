@@ -167,7 +167,11 @@ const CreateAppointment: React.FC = () => {
         </BackButton>
 
         <HeaderTitle>Cabeleireiros</HeaderTitle>
-        <UserAvatar source={{ uri: user.avatar_url }} />
+        {user.avatar_url ? (
+          <UserAvatar source={{ uri: user.avatar_url }} />
+        ) : (
+          <AvatarDefault size={56} fontSize={28} name={user.name} />
+        )}
       </Header>
 
       <Content>
