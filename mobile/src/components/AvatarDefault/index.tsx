@@ -16,7 +16,10 @@ const AvatarDefault: React.FC<AvatarProps> = ({
 }) => {
   const userFullName = name.split(' ');
   const userInitials =
-    userFullName[0].charAt(0) + userFullName[userFullName.length - 1].charAt(0);
+    userFullName.length > 1
+      ? userFullName[0].charAt(0) +
+        userFullName[userFullName.length - 1].charAt(0)
+      : userFullName[0].charAt(0);
 
   return (
     <Container
