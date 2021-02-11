@@ -8,6 +8,7 @@ import DateTimePicker from '@react-native-community/datetimepicker';
 import api from '../../services/api';
 
 import { useAuth } from '../../hooks/auth';
+import AvatarDefault from '../../components/AvatarDefault';
 
 import {
   Container,
@@ -166,7 +167,6 @@ const CreateAppointment: React.FC = () => {
         </BackButton>
 
         <HeaderTitle>Cabeleireiros</HeaderTitle>
-
         <UserAvatar source={{ uri: user.avatar_url }} />
       </Header>
 
@@ -182,7 +182,11 @@ const CreateAppointment: React.FC = () => {
                 selected={provider.id === selectedProvider}
                 onPress={() => handleSelectedProvider(provider.id)}
               >
-                <ProviderAvatar source={{ uri: provider.avatar_url }} />
+                {provider.avatar_url ? (
+                  <ProviderAvatar source={{ uri: provider.avatar_url }} />
+                ) : (
+                  <AvatarDefault size={32} fontSize={16} name={provider.name} />
+                )}
 
                 <ProviderName selected={provider.id === selectedProvider}>
                   {provider.name}
