@@ -78,7 +78,11 @@ const Dashboard: React.FC = () => {
           <ProviderContainer
             onPress={() => navigateToCreateAppointment(provider.id)}
           >
-            <ProviderAvatar source={{ uri: provider.avatar_url }} />
+            {provider.avatar_url ? (
+              <ProviderAvatar source={{ uri: provider.avatar_url }} />
+            ) : (
+              <AvatarDefault size={72} fontSize={36} name={provider.name} />
+            )}
 
             <ProviderInfo>
               <ProviderName>{provider.name}</ProviderName>
