@@ -8,7 +8,7 @@ interface ContainerProps {
 export const Container = styled.Text<ContainerProps>`
   width: ${({ size }) => size}px;
   height: ${({ size }) => size}px;
-  background: #ff9000;
+  background: #ff9;
   border-radius: ${({ size }) => size / 2}px;
 
   justify-content: center;
