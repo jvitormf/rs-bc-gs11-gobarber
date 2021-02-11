@@ -5,6 +5,7 @@ import { useNavigation } from '@react-navigation/native';
 import api from '../../services/api';
 
 import { useAuth } from '../../hooks/auth';
+import AvatarDefault from '../../components/AvatarDefault';
 
 import {
   Container,
@@ -60,7 +61,11 @@ const Dashboard: React.FC = () => {
           <UserName>{user.name}</UserName>
         </HeaderTitle>
         <ProfileButton onPress={navigateToProfile}>
-          <UserAvatar source={{ uri: user.avatar_url }} />
+          {user.avatar_url ? (
+            <UserAvatar source={{ uri: user.avatar_url }} />
+          ) : (
+            <AvatarDefault size={56} fontSize={28} name={user.name} />
+          )}
         </ProfileButton>
       </Header>
       <ProvidersList

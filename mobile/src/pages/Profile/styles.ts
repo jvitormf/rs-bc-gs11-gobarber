@@ -20,6 +20,7 @@ export const Title = styled.Text`
 
 export const UserAvatarButton = styled.TouchableOpacity`
   margin-top: 100px;
+  align-items: center;
 `;
 
 export const UserAvatar = styled.Image`
