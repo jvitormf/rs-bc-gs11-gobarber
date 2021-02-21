@@ -104,7 +104,7 @@ Run the commands below to install and run the app.
     yarn
 
     #Start the server
-    yarn dev
+    yarn dev:server
    ```
   ```sh
     #Go to frontend folder
