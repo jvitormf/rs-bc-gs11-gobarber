@@ -56,6 +56,7 @@ Gobarber it's a fictitious barbershop app created by [Rocketseat](https://rocket
   * [Yarn](https://yarnpkg.com/)
   * [Insomnia](https://insomnia.rest/)
   * [DBeaver](https://dbeaver.io/)
+  * [Beekeeper Studio](https://www.beekeeperstudio.io/)
 
   ## Technologies
   * [Node.js](https://nodejs.org/)
